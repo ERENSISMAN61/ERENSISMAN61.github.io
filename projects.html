@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eren ŞİŞMAN - Projelerim</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Fuzzy+Bubbles:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="about.html">Hakkımda</a></li>
+        <li><a href="projects.html">Projelerim</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <section id="projects">
+      <h2>Projelerim</h2>
+
+      <button onclick="filterProjects('latest')">En Son Projeler</button>
+      <button onclick="filterProjects('popular')">En Beğenilen Projeler</button>
+      <button onclick="showAllProjects()">Tümünü Gör</button>
+
+      <div id="projectContainer">
+        <div class="project" data-category="latest">
+          <img src="proje1.png" alt="Proje 1" />
+          <p>Multiplayer Tank Oyunu</p>
+          <button onclick="openScreen('project1')">Detayları Gör</button>
+        </div>
+        <div class="project" data-category="popular">
+          <img src="proje2.png" alt="Proje 2" />
+          <p>Açık Dünya Gemi Savaşı Oyunu</p>
+          <button onclick="openScreen('project2')">Detayları Gör</button>
+        </div>
+        <div class="project" data-category="popular">
+          <img src="proje3.png" alt="Proje 3" />
+          <p>Rogue-like 2D Oyun</p>
+          <button onclick="openScreen('project3')">Detayları Gör</button>
+        </div>
+        <div class="project" data-category="latest">
+          <img src="proje4.png" alt="Proje 4" />
+          <p>Mağaradan Kaçış Oyunu</p>
+          <button onclick="openScreen('project4')">Detayları Gör</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="projectScreen" class="screen" style="display: none">
+      <div class="screen-content">
+        <span class="close" onclick="closeScreen()">&times;</span>
+        <img id="screenImage" src="" alt="Proje" />
+        <p id="screenDescription"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
